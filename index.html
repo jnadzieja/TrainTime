@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Title of Document -->
+  <title>Train Scheduler</title>
+
+  <!-- Links to Bootstrap, Fontawesome and my custom CSS respectively -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+  <!-- Added Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+  <!-- Link to Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+
+  <!-- Link to Moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+
+</head>
+
+<body style="font-family: 'Quicksand', sans-serif;">
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="jumbotron text-center mx-auto" style="background: #5a5a5a; color: #ffffff;">
+        <p style="font-size: 54px; font-weight: bold;">Anytime is Train Time</p>
+        <p style="font-size: 28px; font-weight: bold;">Never be late again...</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header" style="background: #1e2d5f; color: #ffffff;">
+          Current Train Schedule
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">Train Name</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Frequency</th>
+              <th scope="col">Next Arrival</th>
+              <th scope="col">Minutes Away</th>
+            </tr>
+            </thead>
+            <tbody id="tb">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row my-4">
+    <div class="col-12">
+      <div class="card-header" style="background: #1e2d5f; color: #ffffff;">
+        Add Train
+      </div>
+      <div class="card-body rounded" style="border: solid 1px #ccc;">
+        <form>
+          <div class="form-group">
+            <label for="tn">Train Name</label>
+            <input type="text" class="form-control shadow-sm" id="tn" placeholder="Boogie Nights">
+          </div>
+          <div class="form-group">
+            <label for="di">Destination</label>
+            <input type="text" class="form-control shadow-sm" id="di" placeholder="Atlanta">
+          </div>
+          <div class="form-group">
+            <label for="fa">First Arrival Time (Military Time)</label>
+            <input type="text" class="form-control shadow-sm" id="fa" placeholder="16:00">
+          </div>
+          <div class="form-group">
+            <label for="fq">Frequency (Minutes)</label>
+            <input type="text" class="form-control shadow-sm" id="fq" placeholder="10">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-success shadow-sm" id="sb">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Links to jQuery and other JavaScript libraries as well as my own personal JS File -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/app.js"></script>
+</body>
+
+</html>
